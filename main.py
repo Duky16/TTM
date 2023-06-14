@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import *
 from tkinter import filedialog
 from PIL import ImageTk, Image
+from interface import makecenter
 
 root = Tk()
 root.title("Chẩn đoán bệnh viêm quanh cuống")
@@ -10,15 +11,6 @@ root.minsize(height=450,width=600)
 
 frame = Frame(root)
 frame.pack(side=BOTTOM,padx=15,pady=15)
-
-
-def makecenter(root):
-    root.update_idletasks()
-    width = root.winfo_width()
-    height = root.winfo_height()
-    x = (root.winfo_screenwidth() // 2) - (width // 2)
-    y = (root.winfo_screenheight() // 2) - (height // 2)
-    root.geometry('{}x{}+{}+{}'.format(width, height, x, y))
 
 
 def selectpic():
